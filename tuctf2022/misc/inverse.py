@@ -7,7 +7,6 @@ p.recvuntil(b"version ")
 version = int(p.readline())
 
 f = True
-d = ""
 
 log.info("Version: " + str(version))
 
@@ -18,7 +17,6 @@ def remove2(string):
 	return string.replace("\n", "")
 
 def r(text):
-	global d
 	text = remove2(text.decode())
 	text = text.encode()
 	a = [(text[len(text)-1-i]-version) for i in range(len(text))]
