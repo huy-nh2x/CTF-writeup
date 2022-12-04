@@ -25,7 +25,7 @@ def gen_length(length):
 
 def get_pos(l, d):
     pos_dict = [0, 0]
-    for i in range(2,16):
+    for i in range(2,18):
         pos = []
         p = remote("chals.tuctf.com", 30002)
         text = gen_length(i)
@@ -84,7 +84,7 @@ for i in range(10):
         p_d = get_pos(i, d)
         solveX(i, d, p_d)
     else:
-        d = get_dict(i,16)
+        d = get_dict(i,17)
         solve(i,d)
 
 CONN.interactive()
